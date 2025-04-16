@@ -33,7 +33,7 @@ export function largest_product(val1, val2, val3) {
     return values[0] * values[1];
 }
 
-// src/functions.js
+// Question 3
 
 export function day_of_the_week(day_num) {
     const days = [
@@ -51,4 +51,41 @@ export function day_of_the_week(day_num) {
     }
 
     return days[day_num - 1];
+}
+
+// Question 4
+
+export function pay_raise(status, years, salary) {
+    if (
+        (status !== 'F' && status !== 'P') ||
+        typeof years !== 'number' || years <= 0 ||
+        typeof salary !== 'number' || salary <= 0
+    ) {
+        return "Error";
+    }
+
+    let raisePercent = 0.02;
+
+    if (status === 'F') {
+        if (years >= 10) raisePercent = 0.05;
+        else if (years < 4) raisePercent = 0.015;
+    } else if (status === 'P') {
+        if (years > 10) raisePercent = 0.03;
+        else if (years < 4) raisePercent = 0.01;
+    }
+
+    const newSalary = salary + (salary * raisePercent);
+    return parseFloat(newSalary.toFixed(2));
+}
+
+// Question 5
+
+export function is_leap(year) {
+    if (typeof year !== 'number' || year <= 0 || !Number.isInteger(year)) {
+        return "Error";
+    }
+
+    if (year % 4 !== 0) return false;
+    if (year % 100 === 0 && year % 400 !== 0) return false;
+    return true;
 }
