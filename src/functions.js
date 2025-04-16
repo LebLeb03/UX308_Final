@@ -11,7 +11,7 @@ export function colour_mix(rgb_colour1, rgb_colour2) {
     const combo = new Set([rgb_colour1, rgb_colour2]);
 
     if (combo.size === 1) {
-        // Same color
+        // Same color for emily 
         return rgb_colour1;
     }
 
