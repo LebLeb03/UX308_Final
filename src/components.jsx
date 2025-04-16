@@ -52,3 +52,41 @@ function Question3() {
 }
 
 export { Question3 };
+
+import { pay_raise } from './functions.js';
+
+function Question4() {
+    return (
+        <section>
+            <h1>4. Pay Raise</h1>
+            <h2>Results</h2>
+            <p>pay_raise("F", 2, 25000) = {pay_raise("F", 2, 25000)}</p>      {/* 25375.00 */}
+            <p>pay_raise("F", 12, 40000) = {pay_raise("F", 12, 40000)}</p>    {/* 42000.00 */}
+            <p>pay_raise("P", 11, 30000) = {pay_raise("P", 11, 30000)}</p>    {/* 30600.00 */}
+            <p>pay_raise("P", 3, 20000) = {pay_raise("P", 3, 20000)}</p>      {/* 20400.00 */}
+            <p>pay_raise("P", 2, 18000) = {pay_raise("P", 2, 18000)}</p>      {/* 18180.00 */}
+            <p>pay_raise("X", 5, 50000) = {pay_raise("X", 5, 50000)}</p>      {/* Error */}
+        </section>
+    );
+}
+
+export { Question4 };
+
+import { is_leap } from './functions.js';
+
+function Question5() {
+    return (
+        <section>
+            <h1>5. Leap Year</h1>
+            <h2>Results</h2>
+            <p>is_leap(1999) = {String(is_leap(1999))}</p>     {/* false */}
+            <p>is_leap(2000) = {String(is_leap(2000))}</p>     {/* true */}
+            <p>is_leap(1900) = {String(is_leap(1900))}</p>     {/* false */}
+            <p>is_leap(2024) = {String(is_leap(2024))}</p>     {/* true */}
+            <p>is_leap(-100) = {String(is_leap(-100))}</p>     {/* Error */}
+            <p>is_leap("year") = {String(is_leap("year"))}</p> {/* Error */}
+        </section>
+    );
+}
+
+export { Question5 };
