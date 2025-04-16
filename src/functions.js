@@ -1,8 +1,5 @@
 /**
- * Mixes two primary RGB colors and returns the resulting color.
- * @param {string} rgb_colour1 - first color
- * @param {string} rgb_colour2 - second color
- * @returns {string} - mixed color or error
+ * Question 1
  */
 export function colour_mix(rgb_colour1, rgb_colour2) {
     const validColors = ["red", "green", "blue"];
@@ -23,4 +20,35 @@ export function colour_mix(rgb_colour1, rgb_colour2) {
     if (combo.has("green") && combo.has("blue")) return "aqua";
 
     return "Error"; // fallback (shouldn't hit here with valid input)
+}
+
+
+// Question 2
+
+export function largest_product(val1, val2, val3) {
+    const values = [val1, val2, val3];
+
+    // Sort descending and take the first 2 values
+    values.sort((a, b) => b - a);
+    return values[0] * values[1];
+}
+
+// src/functions.js
+
+export function day_of_the_week(day_num) {
+    const days = [
+        "Sunday",    // 1 For emily makes it easier for you to read 
+        "Monday",    // 2
+        "Tuesday",   // 3
+        "Wednesday", // 4
+        "Thursday",  // 5
+        "Friday",    // 6
+        "Saturday"   // 7
+    ];
+
+    if (typeof day_num !== "number" || day_num < 1 || day_num > 7) {
+        return "Error";
+    }
+
+    return days[day_num - 1];
 }
