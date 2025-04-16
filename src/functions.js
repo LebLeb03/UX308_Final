@@ -11,7 +11,7 @@ export function colour_mix(rgb_colour1, rgb_colour2) {
     const combo = new Set([rgb_colour1, rgb_colour2]);
 
     if (combo.size === 1) {
-        // Same color for emily 
+        
         return rgb_colour1;
     }
 
@@ -37,7 +37,7 @@ export function largest_product(val1, val2, val3) {
 
 export function day_of_the_week(day_num) {
     const days = [
-        "Sunday",    // 1 For emily makes it easier for you to read 
+        "Sunday",    // 1  
         "Monday",    // 2
         "Tuesday",   // 3
         "Wednesday", // 4
